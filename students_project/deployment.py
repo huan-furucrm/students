@@ -27,7 +27,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Uncomment the following lines corresponding to the authentication type you want to use.
 # For system-assigned identity.
-cred = DefaultAzureCredential()
+# cred = DefaultAzureCredential()
 
 # For user-assigned identity.
 # managed_identity_client_id = os.getenv('AZURE_POSTGRESQL_CLIENTID')
@@ -40,15 +40,19 @@ cred = DefaultAzureCredential()
 # cred = ClientSecretCredential(tenant_id=tenant_id, client_id=client_id, client_secret=client_secret)
 
 # Acquire the access token.
-accessToken = cred.get_token('https://ossrdbms-aad.database.windows.net/.default')
+# accessToken = cred.get_token('https://ossrdbms-aad.database.windows.net/.default')
 # In your setting file, eg. settings.py
-host = os.getenv('AZURE_POSTGRESQL_HOST')
-user = os.getenv('AZURE_POSTGRESQL_USER')
-password = accessToken.token # this is accessToken acquired from above step.
-database = os.getenv('AZURE_POSTGRESQL_NAME')
+# host = os.getenv('AZURE_POSTGRESQL_HOST')
+# user = os.getenv('AZURE_POSTGRESQL_USER')
+# password = accessToken.token # this is accessToken acquired from above step.
+# database = os.getenv('AZURE_POSTGRESQL_NAME')
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'default1': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': database,
         'USER': user,
