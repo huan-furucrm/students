@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = '/staticfiles/'
 
 # Thư mục chứa tệp tĩnh khi thu thập chúng trong môi trường production
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Đường dẫn bổ sung (nếu có) để tìm tệp tĩnh từ nhiều nguồn khác nhau
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
