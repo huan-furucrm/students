@@ -117,13 +117,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # Đường dẫn URL mà các tệp tĩnh sẽ được phục vụ
-STATIC_URL = '/staticfiles/'
+STATIC_URL = '/static/'
 
 # Thư mục chứa tệp tĩnh khi thu thập chúng trong môi trường production
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Đường dẫn bổ sung (nếu có) để tìm tệp tĩnh từ nhiều nguồn khác nhau
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
