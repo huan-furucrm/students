@@ -6,7 +6,7 @@ import psycopg2
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET']
-ALLOWED_HOSTS = [os.environ['WEBSITE_SLOT_HOSTNAME']]
+ALLOWED_HOSTS = [os.environ['WEBSITE_SLOT_HOSTNAME'], 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_SLOT_HOSTNAME']]
 DEBUG = False
 
