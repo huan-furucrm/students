@@ -21,3 +21,7 @@ RUN pip install -r requirements.txt
 
 # Sao chép toàn bộ mã nguồn vào container
 COPY . /code/
+
+
+# Chạy lệnh migrate và khởi động server Django
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
