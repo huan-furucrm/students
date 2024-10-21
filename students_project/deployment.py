@@ -51,14 +51,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    'default1': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': database,
-        'USER': user,
-        'PASSWORD': password,
-        'HOST': host,
-        'PORT': '5432',  # Port is 5432 by default 
-        'OPTIONS': {'sslmode': 'require'},
     }
+    # 'default1': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': database,
+    #     'USER': user,
+    #     'PASSWORD': password,
+    #     'HOST': host,
+    #     'PORT': '5432',  # Port is 5432 by default 
+    #     'OPTIONS': {'sslmode': 'require'},
+    # }
 }
